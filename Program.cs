@@ -6,9 +6,18 @@ System.Console.Write("Second number is: ");
 int SecondNumber = Convert.ToInt32(Console.ReadLine());
 
 string message =
-  FirstNumber >= 0
-    ? "1st number is positive!"
-    : "1st number is negative!";
+
+  // (FirstNumber >= 0 && SecondNumber >= 0)
+  //   ? "1st and/or 2nd numbers are positive!"
+  //   : "1st and/or 2nd numbers are negative!";
+
+  // (FirstNumber >= 0 || SecondNumber >= 0)
+  //   ? "1st or 2nd numbers are positive!"
+  //   : "1st or 2nd numbers are negative!";
+
+  !(FirstNumber >= 0)
+    ? "1st number is not positive!"
+    : "1st number is not negative!";
 
 System.Console.WriteLine(message);
 
