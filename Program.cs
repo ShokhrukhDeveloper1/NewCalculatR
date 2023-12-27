@@ -2,6 +2,8 @@
 
 System.Console.Write("First number is: ");
 int FirstNumber = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Enter operation(+,-,*,/): ");
+string operation=Console.ReadLine();
 System.Console.Write("Second number is: ");
 int SecondNumber = Convert.ToInt32(Console.ReadLine());
 
@@ -43,10 +45,34 @@ else
   System.Console.WriteLine("1st number is less than 2nd number!");
 }
 
-System.Console.WriteLine($"Adding: {FirstNumber} + {SecondNumber} = {FirstNumber+SecondNumber}");
-System.Console.WriteLine($"Subtracting: {FirstNumber} - {SecondNumber} = {FirstNumber-SecondNumber}");
-System.Console.WriteLine($"Divising: {FirstNumber} / {SecondNumber} = {FirstNumber/SecondNumber}");
-System.Console.WriteLine($"Multiplicating: {FirstNumber} * {SecondNumber} = {FirstNumber*SecondNumber}\n");
+string result = operation switch
+{
+  "+" => $"Adding: {FirstNumber} + {SecondNumber} = {FirstNumber+SecondNumber}",
+  "-" => $"Subtracting: {FirstNumber} - {SecondNumber} = {FirstNumber-SecondNumber}",
+  "/" => $"Divising: {FirstNumber} / {SecondNumber} = {FirstNumber/SecondNumber}",
+  "*" => $"Multiplicating: {FirstNumber} * {SecondNumber} = {FirstNumber*SecondNumber}",
+  _ => "Operation Not Found!"
+};
+System.Console.WriteLine(result);
+
+// switch(operation)
+// {
+//   case "+":
+//     System.Console.WriteLine($"Adding: {FirstNumber} + {SecondNumber} = {FirstNumber+SecondNumber}");
+//       break;
+//   case "-":
+//     System.Console.WriteLine($"Subtracting: {FirstNumber} - {SecondNumber} = {FirstNumber-SecondNumber}");
+//       break;
+//   case "/":
+//     System.Console.WriteLine($"Divising: {FirstNumber} / {SecondNumber} = {FirstNumber/SecondNumber}");
+//       break;
+//   case "*":
+//     System.Console.WriteLine($"Multiplicating: {FirstNumber} * {SecondNumber} = {FirstNumber*SecondNumber}");
+//       break;
+//   default:
+//     System.Console.WriteLine("Operation Not Found!");
+//       break;
+// }
 
 // System.Console.WriteLine($"1st number greater than 2nd number: {FirstNumber>SecondNumber}");
 // System.Console.WriteLine($"1st number greater than or equal to 2nd number: {FirstNumber>=SecondNumber}");
