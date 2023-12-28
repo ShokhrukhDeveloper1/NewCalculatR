@@ -93,3 +93,13 @@ if(FirstNumber>0)
     counter++;
   }
 }
+System.Console.WriteLine();
+
+for(int iterator=1;iterator<=10;iterator++)
+{
+  for(int innerIterator=1;innerIterator<=10;innerIterator++)
+  {
+    System.Console.WriteLine($"{iterator} * {innerIterator} = {iterator*innerIterator}");
+  }
+  System.Console.WriteLine();
+}
