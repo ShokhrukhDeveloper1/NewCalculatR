@@ -80,3 +80,16 @@ System.Console.WriteLine(result);
 // System.Console.WriteLine($"1st number less than or equal to 2nd number: {FirstNumber<=SecondNumber}");
 // System.Console.WriteLine($"Numbers are not equal: {FirstNumber==SecondNumber}");
 // System.Console.WriteLine($"Numbers are not equal: {FirstNumber!=SecondNumber}");
+
+if(FirstNumber>0)
+{
+  int counter=0;
+  while(counter<FirstNumber)
+  {
+    if(counter%2==0)
+    {
+      System.Console.Write(counter+" ");
+    }
+    counter++;
+  }
+}
